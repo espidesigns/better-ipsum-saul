@@ -1,0 +1,255 @@
+/**
+ * Title: Better Ipsum Saul
+ * Modified by: side project by Mark
+ * Modifier URL: http://espidesigns.com
+ * Description: Lorem Ipsum Generator with Better Call Saul dialogue and excerpts http://www.bettercallsaul.com/
+ * Author: @chriscoyier
+ * Author URL: http://css-tricks.com/
+ * Open source code from HTML-Ipsum by (thanks, Chris!) https://github.com/chriscoyier/HTML-Ipsum
+ */
+/** { margin: 0; padding: 0; box-sizing: border-box;}*/
+
+body {
+  font: 14px Helvetica, Arial, sans-serif;
+  min-width: 910px;
+  padding: 0 20px;
+  background-color: #5E8EB1;
+  color: #333;
+}
+a { text-decoration: none; }
+
+/* Header */
+#header {
+  height: 125px;
+  background: #FBAF04;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #649AC0),
+    color-stop(1, #5E8EB1)
+  );
+  background-image: -o-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
+  background-image: -moz-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
+  background-image: -webkit-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
+  background-image: -ms-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
+  background-image: linear-gradient(to bottom, #649AC0 0%, #5E8EB1 100%);
+  margin: 0 -20px;
+}
+
+#header h1 {
+  /*width: 447px; height: 125px;*/
+  margin: 0 0 0 15px;
+  padding: 20px;
+  color: #333;
+  font-family: "Brush Script MT", serif;
+  font-weight: normal;
+  font-size: 5em;
+  text-align: center;
+  text-shadow:
+   -1px -1px 0 rgba(255,255,255,.6),
+    1px -1px 0 rgba(255,255,255,.6),
+    -1px 1px 0 rgba(255,255,255,.6),
+     1px 1px 0 rgba(255,255,255,.6);
+}
+
+#extras { position: absolute; right: 0; top: 0; width: 125px; text-align: right; }
+#extras div { width: 125px; float: right; }
+#extras h2 { color: #f3c99b; }
+#extras a { font-family: Georgia, Serif; text-transform: uppercase; color: #fff; }
+#extras a:hover,
+#extras #bsa a:hover,
+#extras #bsa .adblock a:hover { background: #222; }
+
+#copied-notice {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50px;
+  z-index: 9000;
+  width: 500px;
+  height: 282px;
+  /*line-height: 40px;*/
+  margin: -40px 0 0 -250px;
+  background: url("../images/itsshowtime.gif");
+  /*text-indent: -9999px;*/
+  background-color: green;
+  font-size: 24px;
+  /*font-family: "Brush Script MT", serif;*/
+  text-align: center;
+  color: white;
+}
+#copied-notice span {
+  font-weight: normal;
+  color: #fff;
+  font-size: 16px;
+  text-shadow:
+   -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+     2px 2px 0 black;
+}
+
+
+
+/* Form */
+fieldset > textarea {
+  width: 94%;
+  border: none;
+  margin: 0;
+  padding: 10px;
+  font-size: inherit;
+  font-family: monospace, sans-serif;
+  background-color: #efefef;
+}
+fieldset {
+  border: 1px solid #ccc;
+  margin: 0 0 20px 0;
+  background-color: #efefef;
+  position: relative;
+  float: left;
+}
+legend {
+  padding: 3px 8px;
+  /*border: 1px solid #ccc;*/
+  margin: 0 0 10px 10px;
+  font-weight: bold; letter-spacing: -1px; font-size: 20px;
+
+  background: #FBAF04;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #FDE90C),
+    color-stop(1, #FBB104)
+  );
+  background-image: -o-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
+  background-image: -moz-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
+  background-image: -webkit-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
+  background-image: -ms-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
+  background-image: linear-gradient(to bottom, #FDE90C 0%, #FBB104 100%);
+  border: 1px solid transparent;
+  border-top: 1px solid #FEE3AE;
+  border-bottom: 1px solid #8C8008;
+  box-shadow: 0 0 5px #8C8008;
+}
+legend span {
+  font-family: monospace, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #404326;
+}
+
+.col {
+  width: 90%;
+  margin: 20px auto 0;
+  /*float: left; */
+  overflow: hidden;
+  padding-top: 10px;
+}
+@media screen and (max-width: 899px) {
+  .col {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .col {
+    width: 70%;
+  }
+  fieldset {
+    width: 94%;
+  }
+}
+/*.last { margin-right: 0; float: right; }*/
+#footer { background: #d15d00; padding: 30px; color: #fff; font-size: 20px;}
+#footer a { color: #fff; font-weight: bold; }
+#footer a:hover { text-decoration: underline; }
+
+
+/* previewer */
+
+.previewer {
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 0 10px black;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity .2s ease;
+  -o-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+.previewer a {
+  pointer-events: none;
+}
+
+input.switch:empty
+{
+  position: absolute;
+  left: -9999px;
+}
+
+input.switch ~ label {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 3.2em;
+}
+input.switch:empty ~ label
+{
+  line-height: 1.6em;
+  text-indent: -9999px;
+  margin: 0.2em 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.switch:empty ~ label:before,
+input.switch:empty ~ label:after
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+  width: 48px;
+  background-color: #c33;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 2px rgba(0,0,0,0.3);
+  -webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+input.switch:empty ~ label:after
+{
+  width: 24px;
+  top: 2px;
+  bottom: 2px;
+  margin-left: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
+}
+
+input.switch:checked ~ .previewer {
+  opacity: 1;
+  display: block;
+}
+
+input.switch:checked ~ label:before
+{
+  background-color: #393;
+}
+
+input.switch:checked ~ label:after
+{
+  margin-left: 22px;
+}

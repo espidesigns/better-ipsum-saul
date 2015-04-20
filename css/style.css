@@ -253,3 +253,7 @@ input.switch:checked ~ label:after
 {
   margin-left: 22px;
 }
+
+.highlight {
+  color: #FDE80B;
+}

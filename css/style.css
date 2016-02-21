@@ -13,7 +13,7 @@ body {
   font: 14px Helvetica, Arial, sans-serif;
   min-width: 910px;
   padding: 0 20px;
-  background-color: #5E8EB1;
+  background-color: #f5f5f5;
   color: #333;
 }
 a { text-decoration: none; }
@@ -21,19 +21,19 @@ a { text-decoration: none; }
 /* Header */
 #header {
   height: 125px;
-  background: #FBAF04;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0, #649AC0),
-    color-stop(1, #5E8EB1)
-  );
-  background-image: -o-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
-  background-image: -moz-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
-  background-image: -webkit-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
-  background-image: -ms-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
-  background-image: linear-gradient(to bottom, #649AC0 0%, #5E8EB1 100%);
+  // background: #fff;
+  // background-image: -webkit-gradient(
+  //   linear,
+  //   left top,
+  //   left bottom,
+  //   color-stop(0, #649AC0),
+  //   color-stop(1, #5E8EB1)
+  // );
+  // background-image: -o-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
+  // background-image: -moz-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
+  // background-image: -webkit-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
+  // background-image: -ms-linear-gradient(bottom, #649AC0 0%, #5E8EB1 100%);
+  // background-image: linear-gradient(to bottom, #649AC0 0%, #5E8EB1 100%);
   margin: 0 -20px;
 }
 
@@ -42,8 +42,8 @@ a { text-decoration: none; }
   margin: 0 0 0 15px;
   padding: 20px;
   color: #333;
-  font-family: "Brush Script MT", serif;
-  font-weight: normal;
+  // font-family: "Brush Script MT", serif;
+  font-weight: bold;
   font-size: 5em;
   text-align: center;
   text-shadow:
@@ -96,44 +96,59 @@ a { text-decoration: none; }
 fieldset > textarea {
   width: 94%;
   border: none;
-  margin: 0;
-  padding: 10px;
+  margin: 0 0 10px;
+  padding: 20px;
   font-size: inherit;
   font-family: monospace, sans-serif;
   background-color: #efefef;
 }
+textarea {
+  outline: none;
+}
 fieldset {
   border: 1px solid #ccc;
-  margin: 0 0 20px 0;
+  margin: 0 0 40px 0;
   background-color: #efefef;
   position: relative;
   float: left;
+  padding-bottom: 20px;
 }
 legend {
+  // font-weight: bold;
+  font-size: 18px;
+}
+button {
   padding: 3px 8px;
+  float: right;
+
   /*border: 1px solid #ccc;*/
-  margin: 0 0 10px 10px;
+  margin: 0 0 -30px -30px;
   font-weight: bold; letter-spacing: -1px; font-size: 20px;
 
   background: #FBAF04;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0, #FDE90C),
-    color-stop(1, #FBB104)
-  );
-  background-image: -o-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
-  background-image: -moz-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
-  background-image: -webkit-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
-  background-image: -ms-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
-  background-image: linear-gradient(to bottom, #FDE90C 0%, #FBB104 100%);
-  border: 1px solid transparent;
-  border-top: 1px solid #FEE3AE;
-  border-bottom: 1px solid #8C8008;
-  box-shadow: 0 0 5px #8C8008;
+  // background-image: -webkit-gradient(
+  //   linear,
+  //   left top,
+  //   left bottom,
+  //   color-stop(0, #FDE90C),
+  //   color-stop(1, #FBB104)
+  // );
+  // background-image: -o-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
+  // background-image: -moz-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
+  // background-image: -webkit-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
+  // background-image: -ms-linear-gradient(bottom, #FDE90C 0%, #FBB104 100%);
+  // background-image: linear-gradient(to bottom, #FDE90C 0%, #FBB104 100%);
+  border: none;
+  // border-top: 1px solid #FEE3AE;
+  // border-bottom: 1px solid #8C8008;
+  // box-shadow: 0 0 5px #8C8008;
 }
-legend span {
+button:hover,
+button:focus {
+  background-color: #fde90c;
+  outline: none;
+}
+button span {
   font-family: monospace, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -255,5 +270,5 @@ input.switch:checked ~ label:after
 }
 
 .highlight {
-  color: #FDE80B;
+  color: #FBAF04;
 }
